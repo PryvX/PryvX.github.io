@@ -97,43 +97,6 @@ export default defineConfig({
             ]
           }
         ]
-      },
-      {
-        text: 'API Reference',
-        collapsed: true,
-        link: '/api-reference',
-        items: [
-          {
-            text: 'auth',
-            items: [
-              { text: 'Authenticating a client', link: '/api-reference/auth/authenticating-a-client' },
-              { text: 'Refreshing an access token', link: '/api-reference/auth/refreshing-an-access-token' },
-              { text: 'Revoking a session', link: '/api-reference/auth/revoking-a-session' }
-            ]
-          },
-          {
-            text: 'workspaces',
-            items: [
-              { text: 'Creating a workspace', link: '/api-reference/workspaces/creating-a-workspace' },
-              { text: 'Listing workspaces', link: '/api-reference/workspaces/listing-workspaces' }
-            ]
-          },
-          {
-            text: 'data-connections',
-            items: [
-              { text: 'Registering a data connection', link: '/api-reference/data-connections/registering-a-data-connection' },
-              { text: 'Retrieving connection status', link: '/api-reference/data-connections/retrieving-connection-status' }
-            ]
-          },
-          {
-            text: 'computations',
-            items: [
-              { text: 'Submitting a computation', link: '/api-reference/computations/submitting-a-computation' },
-              { text: 'Retrieving computation status', link: '/api-reference/computations/retrieving-computation-status' },
-              { text: 'Retrieving computation results', link: '/api-reference/computations/retrieving-computation-results' }
-            ]
-          }
-        ]
       }
     ]
   }
