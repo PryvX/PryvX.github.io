@@ -1,21 +1,20 @@
 # Private Credit Scoring
 
-Traditional credit scoring relies on data the applicant's primary bank already has. Better decisions — particularly for thin-file or underbanked applicants — require alternative data held by other institutions: telecom payment history, utility payments, e-commerce transaction patterns, or a secondary bank relationship. Sharing that data in raw form raises consent, competitive, and regulatory concerns for every party involved.
+Better credit decisions — particularly for thin-file or underbanked applicants — often depend on alternative data held by a different institution: a telecom payment history, a secondary bank relationship, an e-commerce transaction pattern. Sharing that data in raw form raises consent, competitive, and regulatory concerns for every party involved.
 
 ## The problem
 
-- Alternative data sources hold predictive signal but are reluctant to share raw records with a lender they may consider a competitor or counterparty risk.
-- Applicants may not want every data holder to know they are being scored elsewhere.
-- Regulators expect a clear, auditable basis for every credit decision, including when external data contributed to it.
+- Alternative data holders are reluctant to hand over raw records to a lender they may see as a competitor or counterparty risk.
+- Regulators expect a clear, auditable basis for every credit decision, including any external data that contributed to it.
 
-## How PryvX solves it
+## How PryvX addresses it
 
-The lender and one or more alternative data holders connect their relevant fields to a PryvX workspace. Using [Fully Homomorphic Encryption and secure multiparty computation](/overview/privacy-enhancing-technologies), PryvX computes a joint risk score from the combined signal without any party seeing another's raw records. The collaboration contract can restrict the output to a single score and confidence band, with no ability to reverse-engineer the contributing data.
+The lender and one or more alternative data holders each hash their customer-matching fields locally, then connect their relevant datasets to a shared Collaboration Room. A task is built — manually or via the AI query builder — to join the datasets on the hashed identifier and return an aggregate risk signal (for example, an average payment-delinquency rate for matched customers) rather than individual records, by granting the lender **Aggregate Insight** rather than **Individual Insights** permission. See [Query Permissions & Credits](/overview/query-permissions-and-credits).
 
 ## Outcome
 
-- Better-informed credit decisions for thin-file and underbanked applicants, using data no single institution held alone.
-- Alternative data holders can monetize their data's predictive value without ever exposing individual records.
-- A fully attested computation trail supporting fair-lending and model-risk audits.
+- Better-informed decisions for applicants whose full risk profile isn't visible to a single lender.
+- Alternative data holders can contribute predictive signal without exposing individual customer records.
+- A logged, exportable record of every task run, supporting fair-lending and model-risk review.
 
-Related: [No-Code AI & Analysis](/features/no-code-ai-analysis) for how the joint scoring model is defined without writing cryptography or SQL code.
+Related: [No-Code AI Query Builder](/features/no-code-ai-analysis) for defining the joint scoring query without writing SQL.

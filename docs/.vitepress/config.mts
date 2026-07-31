@@ -2,7 +2,7 @@ import { defineConfig } from 'vitepress'
 
 export default defineConfig({
   title: 'PryvX Documentation',
-  description: 'PryvX Privacy-Enhancing Technology (PET) data collaboration platform documentation',
+  description: 'PryvX PET data collaboration platform documentation',
   lastUpdated: true,
   cleanUrls: false,
   head: [['link', { rel: 'icon', href: '/favicon.svg', type: 'image/svg+xml' }]],
@@ -11,8 +11,9 @@ export default defineConfig({
     logo: '/logo.svg',
 
     nav: [
-      { text: 'Guide', link: '/', activeMatch: '^/$|^/overview|^/features|^/use-cases|^/how-to-guide|^/api-reference' },
-      { text: 'Solutions', link: '/solutions' }
+      { text: 'Guide', link: '/', activeMatch: '^/$|^/overview|^/features|^/use-cases|^/how-to-guide' },
+      { text: 'Solutions', link: '/solutions' },
+      { text: 'Launch App', link: 'https://platform.pryvx.com' }
     ],
 
     socialLinks: [
@@ -21,11 +22,6 @@ export default defineConfig({
 
     search: {
       provider: 'local'
-    },
-
-    editLink: {
-      pattern: 'https://github.com/PryvX/PryvX.github.io/edit/main/docs/:path',
-      text: 'Edit this page on GitHub'
     },
 
     footer: {
@@ -45,9 +41,9 @@ export default defineConfig({
         link: '/overview',
         items: [
           { text: 'How PryvX Works', link: '/overview/how-pryvx-works' },
-          { text: 'Privacy-Enhancing Technologies', link: '/overview/privacy-enhancing-technologies' },
-          { text: 'Confidential Clean Rooms', link: '/overview/confidential-clean-rooms' },
-          { text: 'Deployment Models', link: '/overview/deployment-models' },
+          { text: 'Privacy & PII Handling', link: '/overview/privacy-and-pii-handling' },
+          { text: 'Collaboration Rooms', link: '/overview/collaboration-rooms' },
+          { text: 'Query Permissions & Credits', link: '/overview/query-permissions-and-credits' },
           { text: 'Platform UI', link: '/overview/platform-ui' }
         ]
       },
@@ -56,10 +52,10 @@ export default defineConfig({
         collapsed: true,
         link: '/features',
         items: [
-          { text: 'Secure Data Collaboration', link: '/features/secure-data-collaboration' },
-          { text: 'Post-Quantum Cryptography', link: '/features/post-quantum-cryptography' },
-          { text: 'Flexible Deployment', link: '/features/flexible-deployment' },
-          { text: 'No-Code AI & Analysis', link: '/features/no-code-ai-analysis' }
+          { text: 'Collaboration Rooms', link: '/features/collaboration-rooms' },
+          { text: 'Local PII Hashing Tool', link: '/features/local-pii-hashing' },
+          { text: 'Multi-Cloud Dataset Connections', link: '/features/multi-cloud-dataset-connections' },
+          { text: 'No-Code AI Query Builder', link: '/features/no-code-ai-analysis' }
         ]
       },
       {
@@ -67,10 +63,10 @@ export default defineConfig({
         collapsed: true,
         link: '/use-cases',
         items: [
-          { text: 'Telecom–Banking Fraud Prevention', link: '/use-cases/telecom-banking-fraud-prevention' },
+          { text: 'Telecom Fraud Detection', link: '/use-cases/telecom-banking-fraud-prevention' },
           { text: 'Private Credit Scoring', link: '/use-cases/private-credit-scoring' },
           { text: 'Threat Intelligence Sharing', link: '/use-cases/threat-intelligence-sharing' },
-          { text: 'IoT & Cybersecurity', link: '/use-cases/iot-cybersecurity' }
+          { text: 'Customer Overlap & Marketing Analytics', link: '/use-cases/customer-overlap-marketing-analytics' }
         ]
       },
       {
@@ -78,22 +74,23 @@ export default defineConfig({
         collapsed: true,
         link: '/how-to-guide',
         items: [
-          { text: 'Creating a Workspace', link: '/how-to-guide/creating-a-workspace' },
-          { text: 'Connecting a Data Source', link: '/how-to-guide/connecting-a-data-source' },
-          { text: 'Defining a Collaboration Contract', link: '/how-to-guide/defining-a-collaboration-contract' },
-          { text: 'Running a Joint Analysis', link: '/how-to-guide/running-a-joint-analysis' },
+          { text: 'Creating a Collaboration Room', link: '/how-to-guide/creating-a-collaboration-room' },
+          { text: 'Hashing PII Before Upload', link: '/how-to-guide/hashing-pii-before-upload' },
+          { text: 'Adding a Dataset', link: '/how-to-guide/adding-a-dataset' },
+          { text: 'Inviting Collaborators & Query Permissions', link: '/how-to-guide/inviting-collaborators-and-query-permissions' },
+          { text: 'Building and Running a Task', link: '/how-to-guide/building-and-running-a-task' },
           {
-            text: 'Reviewing Results',
+            text: 'Reviewing Task Results',
             link: '/how-to-guide/reviewing-results',
             items: [
-              { text: 'Verifying Computation Integrity', link: '/how-to-guide/reviewing-results/verifying-computation-integrity' }
+              { text: 'Understanding Task Status & Credits', link: '/how-to-guide/reviewing-results/understanding-task-status-and-credits' }
             ]
           },
           {
-            text: 'Exporting Insights',
+            text: 'Exporting Results',
             link: '/how-to-guide/exporting-insights',
             items: [
-              { text: 'Audit Trail & Compliance Logs', link: '/how-to-guide/exporting-insights/audit-trail-and-compliance-logs' }
+              { text: 'Generating an Audit & Compliance Report', link: '/how-to-guide/exporting-insights/generating-an-audit-compliance-report' }
             ]
           }
         ]

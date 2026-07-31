@@ -1,12 +1,11 @@
 # How-To Guide
 
-This guide walks through a complete PryvX collaboration end to end, from creating a workspace through to exporting an attested result. Follow the pages in order the first time through:
+This guide walks through a complete PryvX collaboration end to end. Follow the pages in order the first time through:
 
-1. [Creating a Workspace](/how-to-guide/creating-a-workspace)
-2. [Connecting a Data Source](/how-to-guide/connecting-a-data-source)
-3. [Defining a Collaboration Contract](/how-to-guide/defining-a-collaboration-contract)
-4. [Running a Joint Analysis](/how-to-guide/running-a-joint-analysis)
-5. [Reviewing Results](/how-to-guide/reviewing-results) — including [Verifying Computation Integrity](/how-to-guide/reviewing-results/verifying-computation-integrity)
-6. [Exporting Insights](/how-to-guide/exporting-insights) — including [Audit Trail & Compliance Logs](/how-to-guide/exporting-insights/audit-trail-and-compliance-logs)
-
-For programmatic access to each of these steps, see the [API Reference](/api-reference).
+1. [Creating a Collaboration Room](/how-to-guide/creating-a-collaboration-room)
+2. [Hashing PII Before Upload](/how-to-guide/hashing-pii-before-upload)
+3. [Adding a Dataset](/how-to-guide/adding-a-dataset)
+4. [Inviting Collaborators & Query Permissions](/how-to-guide/inviting-collaborators-and-query-permissions)
+5. [Building and Running a Task](/how-to-guide/building-and-running-a-task)
+6. [Reviewing Task Results](/how-to-guide/reviewing-results) — including [Understanding Task Status & Credits](/how-to-guide/reviewing-results/understanding-task-status-and-credits)
+7. [Exporting Results](/how-to-guide/exporting-insights) — including [Generating an Audit & Compliance Report](/how-to-guide/exporting-insights/generating-an-audit-compliance-report)

@@ -1,21 +1,22 @@
 # How PryvX Works
 
-Organizations routinely need to answer questions that span more than one company's data: *is this SIM card linked to a mule bank account? does this applicant's alternative data support a better credit decision? has this threat indicator been seen by another bank?* Answering these questions has traditionally required sharing raw data — customer records, transaction logs, device identifiers — between organizations, which is slow, legally fraught, and a competitive and security risk.
+Two organizations often need to answer a question that spans both of their data — *does this phone number appear in both our fraud lists? how much does our customer base overlap with theirs? does this applicant's data at another lender change their risk score?* — without handing each other raw customer records.
 
-PryvX removes the need to share raw data at all. Each participant keeps its data exactly where it is today — on-premise, in a private cloud, in any public cloud — and connects it to PryvX through an encrypted data connection. When a joint analysis is requested, PryvX:
+PryvX addresses this with a **Collaboration Room**: a shared workspace, scoped to one collaboration, where each party connects its own data and only pre-agreed query outputs are ever visible to the other side.
 
-1. **Encrypts** each party's inputs at the source, using keys that PryvX itself does not hold.
-2. **Launches** a confidential clean room — an attested, hardware-isolated environment — for the specific computation requested.
-3. **Computes** the joint result inside that environment using homomorphic encryption, secure multiparty computation, or federated learning, depending on the workload.
-4. **Releases** only the agreed-upon output (a score, a match, a trained model, an aggregate statistic) to the requesting parties.
-5. **Scrubs** all intermediate state the moment the job finishes, and produces an attestation log that proves the computation ran the certified code, unmodified.
+## The lifecycle of a room
 
-At no point does any participant — including PryvX as the platform operator — see another party's raw data. This is what allows PryvX to be deployed across regulatory and competitive boundaries: banks collaborating with telecoms, competitors pooling threat intelligence, or public agencies working with private enterprises.
+1. **Create a room.** An owner names the room, gives it a description, and sets an expiry date. See [Creating a Collaboration Room](/how-to-guide/creating-a-collaboration-room).
+2. **Invite collaborators.** The owner invites one or more collaborators by company email, and grants each one a query permission tier. PryvX emails every participant (including the owner) an invitation and a per-room secret key.
+3. **Hash PII locally, then add data.** Before uploading or connecting anything, each party runs PryvX's local PII-sanitizer tool over their file, hashing identifying columns with the room's secret key. Data is then either uploaded as a CSV or connected directly from cloud storage. See [Privacy & PII Handling](/overview/privacy-and-pii-handling) and [Adding a Dataset](/how-to-guide/adding-a-dataset).
+4. **Build a task.** Any collaborator with permission defines a SQL task against two of the room's datasets — either with the no-code join/filter/aggregate builder, or by describing the analysis in plain language and accepting an AI-suggested query.
+5. **Run the task.** Running a task consumes one credit and executes the query against the connected datasets. The result — a data table and, where applicable, an overlap chart — is shown only to the task's creator inside the room.
+6. **Export or report.** Results can be downloaded as CSV, and the room owner can generate a PDF audit & compliance report covering any date range for compliance review.
 
 ## Why this matters
 
-- **Compliance by construction**: because raw data never leaves its owner's control, PryvX collaborations sidestep most cross-border transfer and data-sharing restrictions under GDPR, PDPA, and sector-specific banking secrecy rules.
-- **No new trust relationship required**: participants do not need to trust each other, or fully trust PryvX — they trust the attestation, which is independently verifiable.
-- **Speed**: what used to require months of legal data-sharing agreements can be set up as a PryvX workspace in days.
+- **No bulk data export** — a party's dataset is connected to the room, not copied out to the other side; only query results leave the room.
+- **PII never reaches PryvX in the clear** — identifying columns are hashed on the data owner's own machine before anything is uploaded or connected.
+- **Every action is scoped and expiring** — rooms, permissions, and credits all bound what can happen and for how long.
 
-Continue to [Privacy-Enhancing Technologies](/overview/privacy-enhancing-technologies) to see the specific techniques used, or to [Confidential Clean Rooms](/overview/confidential-clean-rooms) for the isolation layer that makes this possible.
+Continue to [Collaboration Rooms](/overview/collaboration-rooms) for the room's structure, or [Privacy & PII Handling](/overview/privacy-and-pii-handling) for how the hashing step works.

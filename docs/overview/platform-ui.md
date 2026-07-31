@@ -1,27 +1,24 @@
 # Platform UI
 
-The PryvX web application is where analysts create workspaces, connect data sources, define collaboration contracts, and review the results of joint analyses without writing code.
+The PryvX web application is a single dashboard, organized around Collaboration Rooms.
 
-## Workspace dashboard
+## Sidebar navigation
 
-The landing view after sign-in lists every workspace you belong to, its participants, and the status of any computations currently running or scheduled. Workspaces are the top-level container for a collaboration — see [Creating a Workspace](/how-to-guide/creating-a-workspace).
+- **Dashboard** — the landing page after sign-in.
+- **Collaboration Room** — the list of every room you own or collaborate on, and the entry point to create a new one. See [Collaboration Rooms](/overview/collaboration-rooms).
+- **Model Hub** *(optional, enabled per account)* — a catalog of pre-built fraud-detection models, organized by fraud typology (Wangiri, SMS, PBX hacking, CLI spoofing, SIM box), for accounts that have it enabled.
+- **Report** — the Audit & Compliance Report generator. See [Generating an Audit & Compliance Report](/how-to-guide/exporting-insights/generating-an-audit-compliance-report).
+- **Profile** — account details.
+- **Docs** — in-app documentation; currently the [PII hashing guide](/how-to-guide/hashing-pii-before-upload).
 
-## Data connections panel
+## Inside a Collaboration Room
 
-Shows every data source connected to the current workspace, its connection health, schema summary (column names and types only — never sample data), and which collaboration contracts it is eligible to participate in.
+A room's page shows its name, owner, creation and expiry dates, and status (`Active`/`Ended`), followed by three tabs — **Collaborator**, **Data**, **Task** — described in [Collaboration Rooms](/overview/collaboration-rooms).
 
-## No-code query builder
+## Inside a task
 
-Lets analysts describe the joint analysis they want in plain language or a guided form ("flag accounts shared between these two datasets with a risk score above 0.8"), which PryvX compiles into the appropriate PET (MPC, FHE, or federated job) automatically. See [No-Code AI & Analysis](/features/no-code-ai-analysis).
+A task page shows the SQL query it will run (or did run), a **Run Query** button for the task's creator, an **Overlap Analysis** panel with charts (when applicable to the query), a **Task Result** table with the first rows previewed and the full row count, and a task detail card with the creation date, requester, status, and row count. See [Reviewing Task Results](/how-to-guide/reviewing-results).
 
-## Contract & consent view
+## Credit warning banner
 
-Displays the collaboration contract in plain language alongside its machine-enforced terms, and tracks which participants have signed off before a computation is allowed to run.
-
-## Results & attestation viewer
-
-Once a computation completes, this view shows the released output together with the attestation log proving which certified code ran and confirming that no intermediate state was retained. Results can be exported or pushed to downstream systems — see [Exporting Insights](/how-to-guide/exporting-insights).
-
-## Audit trail
-
-A searchable, append-only log of every job run in the workspace: who requested it, which datasets and contract were used, and a link to its attestation record, supporting internal compliance and regulator review.
+If your account's credit balance reaches zero, a banner appears across every page pointing to `hello@pryvx.com`. See [Query Permissions & Credits](/overview/query-permissions-and-credits).

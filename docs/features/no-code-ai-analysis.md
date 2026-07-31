@@ -1,15 +1,17 @@
-# No-Code AI & Analysis
+# No-Code AI Query Builder
 
-PryvX lets analysts leverage LLMs to run joint analyses and generate insights — without writing SQL or complex queries against the underlying encrypted data.
+Tasks inside a Collaboration Room are SQL queries, but you don't have to write SQL to create one.
 
-## How it works
+## Manual builder
 
-Instead of writing a query against a schema you cannot see the contents of, you describe the analysis you want ("flag customers appearing in both datasets with a combined risk score above 0.8") in the workspace's query builder. PryvX's LLM-assisted layer translates that request into the appropriate privacy-preserving computation — an MPC join, an FHE-based score, or a federated model inference — and validates it against the active collaboration contract before it is allowed to run.
+Pick two of the room's datasets as Table 1 and Table 2, choose the matching column to join them on, choose which columns to return, optionally add aggregate functions (MIN, MAX, COUNT, SUM, AVG) over a chosen column, and optionally add WHERE-style filter conditions (`=`, `<`, `>`). PryvX assembles the SQL from these choices — you never type it directly, though you can review it before running.
+
+## AI Suggested Analysis
+
+Instead of building a query field-by-field, switch to the **AI Suggested Analysis** tab, pick the two datasets involved, and describe what you want in plain language — for example, *"show me the total transaction amount per month for accounts that appear in both tables."* PryvX returns one or more suggested queries, each with a title, the generated SQL, and a plain-language description. Selecting **Execute Task** saves that suggestion as the task's query.
 
 ## Why no-code matters here
 
-Traditional data collaboration tooling requires analysts to understand both SQL and the cryptographic primitives underneath, which puts joint analysis out of reach for most business and compliance teams. By moving that translation into the platform, PryvX lets subject-matter experts — fraud analysts, credit risk officers, threat-intel researchers — design and run analyses directly, while the underlying [Privacy-Enhancing Technologies](/overview/privacy-enhancing-technologies) and contract enforcement stay exactly as strict as if an engineer had hand-written the computation.
+This puts task creation in reach of fraud analysts, credit risk officers, and compliance teams — not just engineers who can write SQL against a schema they may not fully understand. The underlying [query permission](/overview/query-permissions-and-credits) granted to the task's creator still governs what the task is allowed to return, regardless of which builder was used.
 
-## Try it yourself
-
-Walk through the full flow, from describing an analysis to reviewing its attested result, in [Running a Joint Analysis](/how-to-guide/running-a-joint-analysis).
+Try it yourself: [Building and Running a Task](/how-to-guide/building-and-running-a-task).

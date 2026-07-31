@@ -1,20 +1,23 @@
-# Reviewing Results
+# Reviewing Task Results
 
-When a computation completes, its result appears in the workspace's **Analyses** view alongside the attestation evidence that proves how it was produced.
+Opening a task after it has run shows three things: the query itself, an overlap analysis (when applicable), and the result table.
 
-## What you'll see
+## SQL Query
 
-- The released output, in the form defined by the collaboration contract (a flag, score, aggregate statistic, or trained model).
-- The contract version the run was executed under.
-- A timestamp and duration for each stage of the run: queued, attesting, running, releasing.
-- A link to the full attestation log — see [Verifying Computation Integrity](/how-to-guide/reviewing-results/verifying-computation-integrity).
+The exact SQL that was run (or will run), with a **Run Query** button for the task's creator and an **Edit** button for manually built tasks (AI-generated tasks can't be edited).
 
-## Interpreting scores and flags
+## Overlap Analysis
 
-Outputs are intentionally minimal by contract design — typically a score, a confidence band, or a boolean flag, not the joined records that produced them. If your team needs more context to act on a result (for example, which specific fields contributed most to a credit score), that must be defined as part of the contract's output type up front, in [Defining a Collaboration Contract](/how-to-guide/defining-a-collaboration-contract), rather than requested after the fact.
+If the task's shape supports it, an expandable panel shows chart-based analysis of the result — this is only visible to the task's creator, and only after the query has been run at least once.
 
-## Re-running with different parameters
+## Task Result
 
-If a result needs adjustment — a different risk threshold, a different time window — you do not need a new contract if the parameter is within the contract's declared bounds. Select **Re-run with new parameters** from the analysis view; this launches a fresh, independently attested computation rather than modifying the completed one.
+An expandable panel showing the first rows of the result table and the total row count. From here you can download the full result — see [Exporting Results](/how-to-guide/exporting-insights).
 
-Next: [Verifying Computation Integrity](/how-to-guide/reviewing-results/verifying-computation-integrity) or, once satisfied, [Exporting Insights](/how-to-guide/exporting-insights).
+## Task Detail
+
+A card showing the task's creation date, the requester's email, its status, and total transaction/row count — see [Understanding Task Status & Credits](/how-to-guide/reviewing-results/understanding-task-status-and-credits) for what these mean.
+
+## Re-running a task
+
+Selecting **Run Query** again re-executes the same SQL and consumes another credit; there's currently no separate "re-run with new parameters" action — to change the query, edit a manual task (or create a new one for an AI-generated task) before running it again.

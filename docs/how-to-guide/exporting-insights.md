@@ -1,19 +1,15 @@
-# Exporting Insights
+# Exporting Results
 
-Once a result has been reviewed, it can be exported to downstream systems or retained as a governed record within PryvX.
+Once a task has run, its result can be downloaded, and a room owner can generate a broader compliance report across rooms.
 
-## Export options
+## Downloading a task's result
 
-- **Direct download** — CSV or JSON export of the released output, available to any workspace member with access to the analysis.
-- **Webhook delivery** — push the result automatically to an internal system (a case-management tool, a scoring engine, a SIEM) as soon as a run completes.
-- **Scheduled sync** — for recurring analyses (for example, a nightly fraud-flag run), configure the output to sync automatically to a connected downstream data store.
+From the task's page, select **Task Result** (the download button, visible to the task's creator) to save the full result set as a CSV file — not just the previewed rows shown on screen. If the task hasn't been run yet, this shows a prompt to run it first.
 
-## What is exported — and what isn't
+## What's exported — and what isn't
 
-Only the output defined by the collaboration contract is ever exportable — a score, a flag, an aggregate statistic, or a trained model artifact. Raw inputs, intermediate joined records, and any other clean-room state are never available for export, by the same technical enforcement described in [Confidential Clean Rooms](/overview/confidential-clean-rooms); this is not a UI-level restriction that could be bypassed.
+Only the columns and rows the task's query actually selected are ever exportable — governed by whatever [query permission](/overview/query-permissions-and-credits) the task's creator holds. There's no way to export a room's underlying datasets directly; only task results.
 
-## Keeping an audit-ready record
+## Broader reporting
 
-Every export is itself logged — who exported it, to where, and a reference back to the originating computation and its attestation record. See [Audit Trail & Compliance Logs](/how-to-guide/exporting-insights/audit-trail-and-compliance-logs) for how to review or export that log for a compliance function.
-
-API equivalent: [Retrieving computation results](/api-reference/computations/retrieving-computation-results).
+For a compliance view across more than one task or room, see [Generating an Audit & Compliance Report](/how-to-guide/exporting-insights/generating-an-audit-compliance-report).

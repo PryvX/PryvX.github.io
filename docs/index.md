@@ -1,27 +1,29 @@
 # Welcome
 
-Welcome to the PryvX documentation. PryvX is a Privacy-Enhancing Technology (PET) data collaboration platform that lets organizations run joint computations and analyses on sensitive data **without ever sharing or exposing the underlying raw data**. Banks, telecoms, healthcare providers, and government agencies use PryvX to collaborate on fraud detection, credit risk, threat intelligence, and more, while keeping every dataset under its owner's control at all times.
+Welcome to the PryvX documentation. PryvX is a PET (Privacy-Enhancing Technology) data collaboration platform: it lets two or more organizations run a shared SQL analysis over their combined data inside a managed **Collaboration Room**, without any party ever handing its raw data to the other, or to PryvX.
 
-This documentation covers what PryvX is, the privacy-enhancing technologies it is built on, the features of the platform, real-world use cases across regulated industries, and a step-by-step how-to guide for setting up and running your first cross-party collaboration.
+This documentation covers what PryvX is, how privacy is protected in practice, the features of the platform, real-world use cases, and a step-by-step how-to guide for setting up and running your first collaboration end to end.
 
-Under the hood, PryvX combines confidential computing (hardware-backed Trusted Execution Environments with remote attestation), Fully Homomorphic Encryption, Secure Multiparty Computation, Federated Learning, Differential Privacy, and Zero-Knowledge Proofs into a single, cloud-agnostic clean room. Data providers encrypt data at the source; it is only ever decrypted inside an attested, isolated environment that even the platform operator cannot inspect, and the environment is scrubbed the moment the job completes.
+Each Collaboration Room has an owner and invited collaborators, an expiry date, and a set of datasets connected to it — either uploaded directly or connected from Google Cloud Storage, AWS S3, or Azure Blob Storage. Before any data is added, PryvX asks each party to locally hash or remove personally identifiable fields (email, phone, name) using a shared per-room key, so join keys can still be matched across parties without either party seeing the other's raw identifiers. Once datasets are connected, any collaborator with the right query permission can build a no-code SQL task — manually, or by describing the analysis in plain language — and run it against the room's data.
 
 ## Where to start?
 
-- New to PryvX? Start with [How PryvX Works](/overview/how-pryvx-works) for a high-level introduction to the platform and the problem it solves.
-- Want to know what's under the hood? Read [Privacy-Enhancing Technologies](/overview/privacy-enhancing-technologies) and [Confidential Clean Rooms](/overview/confidential-clean-rooms).
-- Evaluating PryvX for your organization? Jump to [Features](/features) for platform capabilities, or [Use Cases](/use-cases) to see how banks, telecoms, and regulators are already using it.
-- Ready to build? Follow the [How-To Guide](/how-to-guide/creating-a-workspace) to create a workspace, connect a data source, and run your first joint analysis end to end.
-- Integrating programmatically? See the [API Reference](/api-reference) for authentication, workspaces, data connections, and computations.
+- New to PryvX? Start with [How PryvX Works](/overview/how-pryvx-works) for a high-level walkthrough of a Collaboration Room from creation to result.
+- Want to know how privacy is protected? Read [Privacy & PII Handling](/overview/privacy-and-pii-handling).
+- Evaluating PryvX for your organization? Jump to [Features](/features) for platform capabilities, or [Use Cases](/use-cases) to see how it's applied.
+- Ready to build? Follow the [How-To Guide](/how-to-guide/creating-a-collaboration-room) to create a room, hash and add your data, invite collaborators, and run your first task.
 
 ## What is a PET data collaboration platform?
 
-A **Privacy-Enhancing Technology (PET) data collaboration platform** allows two or more parties to compute jointly over their combined data — training a model, scoring a transaction, matching a threat indicator — while each party's raw data never leaves its own environment in usable form. Instead of exchanging datasets, parties exchange encrypted values, model updates, or attested computations, and only the final, agreed-upon result is revealed. This lets organizations collaborate across company and jurisdictional boundaries without breaching banking secrecy, data protection law (GDPR, PDPA, and similar regimes), or competitive confidentiality.
+A **Privacy-Enhancing Technology (PET) data collaboration platform** lets two or more parties analyze their combined data — matching records, scoring risk, measuring overlap — without exchanging raw datasets. PryvX's current approach centers on two mechanisms working together:
 
-PryvX packages these techniques — confidential clean rooms, homomorphic encryption, MPC, federated learning, differential privacy, and zero-knowledge proofs — behind a no-code interface, so analysts can request a joint analysis in plain language without writing SQL, cryptography code, or infrastructure configuration.
+1. **Local pre-processing**: each party hashes or strips personally identifiable columns on their own machine, using PryvX's open-source PII-sanitizer tool, before any data reaches the platform.
+2. **A permissioned, expiring Collaboration Room**: datasets are connected (not copied out to other parties), collaborators are granted one of three query permission tiers, and every task run is scoped, credited, and tied to an audit-ready report.
+
+PryvX's broader roadmap includes additional PETs — homomorphic encryption, secure multiparty computation, and federated learning — which are referenced in the platform's positioning and are under active development; this documentation describes what is available in the product today, and calls out roadmap items explicitly where relevant.
 
 ## Getting help
 
 - **Email**: [hello@pryvx.com](mailto:hello@pryvx.com)
-- **Solutions overview**: see the [Solutions](/solutions) page for a summary of every PryvX capability and where to learn more
+- **Solutions overview**: see the [Solutions](/solutions) page for a summary of every PryvX capability
 - **Office**: Östermalmsgatan 26A, Stockholm, Sweden
