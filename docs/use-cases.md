@@ -2,7 +2,7 @@
 
 Real-world applications of PryvX Collaboration Rooms:
 
-- [Telecom Fraud Detection](/use-cases/telecom-banking-fraud-prevention) — Wangiri, SIM box, SMS, PBX hacking, CLI spoofing
+- [Telecom-Bank Fraud Detection](/use-cases/telecom-banking-fraud-prevention) — joint fraud signals from Wangiri, SIM box, SMS, PBX hacking, CLI spoofing
 - [Private Credit Scoring](/use-cases/private-credit-scoring) — combine financial and alternative data securely
 - [Threat Intelligence Sharing](/use-cases/threat-intelligence-sharing) — match indicators across organizations
 - [Customer Overlap & Marketing Analytics](/use-cases/customer-overlap-marketing-analytics) — measure shared audiences without pooling customer lists

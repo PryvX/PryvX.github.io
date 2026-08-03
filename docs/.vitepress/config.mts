@@ -63,7 +63,7 @@ export default defineConfig({
         collapsed: true,
         link: '/use-cases',
         items: [
-          { text: 'Telecom Fraud Detection', link: '/use-cases/telecom-banking-fraud-prevention' },
+          { text: 'Telecom-Bank Fraud Detection', link: '/use-cases/telecom-banking-fraud-prevention' },
           { text: 'Private Credit Scoring', link: '/use-cases/private-credit-scoring' },
           { text: 'Threat Intelligence Sharing', link: '/use-cases/threat-intelligence-sharing' },
           { text: 'Customer Overlap & Marketing Analytics', link: '/use-cases/customer-overlap-marketing-analytics' }

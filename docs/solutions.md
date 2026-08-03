@@ -15,7 +15,7 @@ PryvX lets organizations collaborate on sensitive data through managed, permissi
 
 | Industry | Use case |
 | --- | --- |
-| Telecom + Banking | [Telecom Fraud Detection](/use-cases/telecom-banking-fraud-prevention) — Wangiri, SIM box, SMS, PBX hacking, CLI spoofing |
+| Telecom + Banking | [Telecom-Bank Fraud Detection](/use-cases/telecom-banking-fraud-prevention) — joint fraud signals from Wangiri, SIM box, SMS, PBX hacking, CLI spoofing |
 | Financial Services | [Private Credit Scoring](/use-cases/private-credit-scoring) — combine financial and alternative data sources |
 | Government + Enterprise | [Threat Intelligence Sharing](/use-cases/threat-intelligence-sharing) — matching indicators across organizations |
 | Marketing + Retail | [Customer Overlap & Marketing Analytics](/use-cases/customer-overlap-marketing-analytics) — measure shared audiences without pooling customer lists |

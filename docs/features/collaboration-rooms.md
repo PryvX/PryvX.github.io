@@ -14,4 +14,4 @@ Rooms are created with a name, description, and expiry date; collaborators are i
 
 ## Who uses it
 
-Every use case in this documentation — from [Telecom Fraud Detection](/use-cases/telecom-banking-fraud-prevention) to [Customer Overlap & Marketing Analytics](/use-cases/customer-overlap-marketing-analytics) — runs inside a Collaboration Room.
+Every use case in this documentation — from [Telecom-Bank Fraud Detection](/use-cases/telecom-banking-fraud-prevention) to [Customer Overlap & Marketing Analytics](/use-cases/customer-overlap-marketing-analytics) — runs inside a Collaboration Room.
