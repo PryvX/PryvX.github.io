@@ -48,17 +48,6 @@ export default defineConfig({
         ]
       },
       {
-        text: 'Privacy-Enhancing Technologies',
-        collapsed: true,
-        link: '/privacy-enhancing-technologies',
-        items: [
-          { text: 'Homomorphic Encryption', link: '/privacy-enhancing-technologies/homomorphic-encryption' },
-          { text: 'Secure Multiparty Computation', link: '/privacy-enhancing-technologies/secure-multiparty-computation' },
-          { text: 'Trusted Execution Environments', link: '/privacy-enhancing-technologies/trusted-execution-environments' },
-          { text: 'Zero-Knowledge Proofs', link: '/privacy-enhancing-technologies/zero-knowledge-proofs' }
-        ]
-      },
-      {
         text: 'Features',
         collapsed: true,
         link: '/features',
@@ -104,6 +93,17 @@ export default defineConfig({
               { text: 'Generating an Audit & Compliance Report', link: '/how-to-guide/exporting-insights/generating-an-audit-compliance-report' }
             ]
           }
+        ]
+      },
+      {
+        text: 'Privacy-Enhancing Technologies',
+        collapsed: true,
+        link: '/privacy-enhancing-technologies',
+        items: [
+          { text: 'Homomorphic Encryption', link: '/privacy-enhancing-technologies/homomorphic-encryption' },
+          { text: 'Secure Multiparty Computation', link: '/privacy-enhancing-technologies/secure-multiparty-computation' },
+          { text: 'Trusted Execution Environments', link: '/privacy-enhancing-technologies/trusted-execution-environments' },
+          { text: 'Zero-Knowledge Proofs', link: '/privacy-enhancing-technologies/zero-knowledge-proofs' }
         ]
       }
     ]

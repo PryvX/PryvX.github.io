@@ -76,4 +76,8 @@ These are not covered in detail here, but you will often see them alongside the 
 
 ## How this relates to PryvX
 
-This section is educational background on the PET landscape. PryvX's privacy guarantees **today** come from local PII hashing plus the room's permission and expiry model, as described in [Privacy & PII Handling](/overview/privacy-and-pii-handling) and [Collaboration Rooms](/overview/collaboration-rooms). Homomorphic encryption and secure multiparty computation are part of PryvX's longer-term roadmap and are not yet part of the shipped product.
+PryvX puts Privacy-Enhancing Technologies (PETs) into practice to enable secure, privacy-preserving data collaboration. Our platform combines techniques such as PII hashing and tokenisation, permission-controlled collaboration rooms, and cryptographic privacy mechanisms, including [Homomorphic Encryption](/privacy-enhancing-technologies/homomorphic-encryption) and [Secure Multi-Party Computation (SMPC)](/privacy-enhancing-technologies/secure-multiparty-computation), to support data matching, analysis, and collaboration without requiring organisations to expose their underlying sensitive data.
+
+These technologies work alongside our room-level access controls, data governance policies, and expiry mechanisms, allowing organisations to collaborate on sensitive datasets while maintaining control over how their data is accessed and used.
+
+Explore our approach in [Privacy & PII Handling](/overview/privacy-and-pii-handling) and [Collaboration Rooms](/overview/collaboration-rooms).
