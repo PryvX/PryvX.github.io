@@ -11,7 +11,7 @@ export default defineConfig({
     logo: '/logo.svg',
 
     nav: [
-      { text: 'Guide', link: '/', activeMatch: '^/$|^/overview|^/features|^/use-cases|^/how-to-guide' },
+      { text: 'Guide', link: '/', activeMatch: '^/$|^/overview|^/features|^/use-cases|^/how-to-guide|^/privacy-enhancing-technologies' },
       { text: 'Solutions', link: '/solutions' },
       { text: 'Launch App', link: 'https://platform.pryvx.com' }
     ],
@@ -45,6 +45,17 @@ export default defineConfig({
           { text: 'Collaboration Rooms', link: '/overview/collaboration-rooms' },
           { text: 'Query Permissions & Credits', link: '/overview/query-permissions-and-credits' },
           { text: 'Platform UI', link: '/overview/platform-ui' }
+        ]
+      },
+      {
+        text: 'Privacy-Enhancing Technologies',
+        collapsed: true,
+        link: '/privacy-enhancing-technologies',
+        items: [
+          { text: 'Homomorphic Encryption', link: '/privacy-enhancing-technologies/homomorphic-encryption' },
+          { text: 'Secure Multiparty Computation', link: '/privacy-enhancing-technologies/secure-multiparty-computation' },
+          { text: 'Trusted Execution Environments', link: '/privacy-enhancing-technologies/trusted-execution-environments' },
+          { text: 'Zero-Knowledge Proofs', link: '/privacy-enhancing-technologies/zero-knowledge-proofs' }
         ]
       },
       {

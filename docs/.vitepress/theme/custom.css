@@ -1,0 +1,68 @@
+/* ------------------------------------------------------------------
+   Diagrams for the Privacy-Enhancing Technologies section.
+   Inline SVGs use these classes so they follow light / dark theme.
+   ------------------------------------------------------------------ */
+
+.pet-fig {
+  margin: 24px 0;
+  padding: 20px 16px 12px;
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 12px;
+  background: var(--vp-c-bg-soft);
+}
+
+.pet-fig svg {
+  display: block;
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+  overflow: visible;
+}
+
+.pet-fig.narrow svg {
+  max-width: 420px;
+}
+
+.pet-fig figcaption {
+  margin-top: 10px;
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--vp-c-text-2);
+  text-align: center;
+}
+
+/* boxes */
+.pet-fig .box      { fill: var(--vp-c-bg);           stroke: var(--vp-c-divider);   stroke-width: 1.5; }
+.pet-fig .box-brand{ fill: var(--vp-c-brand-soft);   stroke: var(--vp-c-brand-1);   stroke-width: 1.5; }
+.pet-fig .box-ok   { fill: var(--vp-c-success-soft); stroke: var(--vp-c-success-1); stroke-width: 1.5; }
+.pet-fig .box-warn { fill: var(--vp-c-warning-soft); stroke: var(--vp-c-warning-1); stroke-width: 1.5; }
+.pet-fig .box-bad  { fill: var(--vp-c-danger-soft);  stroke: var(--vp-c-danger-1);  stroke-width: 1.5; }
+
+/* text */
+.pet-fig text      { font-family: var(--vp-font-family-base); fill: var(--vp-c-text-1); font-size: 14px; }
+.pet-fig .t-b      { font-weight: 600; font-size: 15px; }
+.pet-fig .t2       { fill: var(--vp-c-text-2); font-size: 12.5px; }
+.pet-fig .t-brand  { fill: var(--vp-c-brand-1); font-weight: 600; }
+.pet-fig .t-ok     { fill: var(--vp-c-success-1); font-weight: 600; }
+.pet-fig .t-bad    { fill: var(--vp-c-danger-1); font-weight: 600; }
+.pet-fig .mono     { font-family: var(--vp-font-family-mono); font-size: 13px; }
+
+/* lines & arrows */
+.pet-fig .arrow    { stroke: var(--vp-c-text-2); stroke-width: 1.6; fill: none; }
+.pet-fig .dash     { stroke: var(--vp-c-text-3); stroke-width: 1.2; stroke-dasharray: 4 4; fill: none; }
+.pet-fig .limit    { stroke: var(--vp-c-danger-1); stroke-width: 1.6; stroke-dasharray: 6 4; fill: none; }
+.pet-fig .ah       { fill: var(--vp-c-text-2); }
+
+/* noise bars (homomorphic encryption) */
+.pet-fig .noise    { fill: var(--vp-c-warning-1); opacity: 0.75; }
+.pet-fig .noise-bad{ fill: var(--vp-c-danger-1);  opacity: 0.8; }
+.pet-fig .noise-ok { fill: var(--vp-c-success-1); opacity: 0.8; }
+
+/* sets (private set intersection) */
+.pet-fig .set-a    { fill: var(--vp-c-brand-1);   fill-opacity: 0.18; stroke: var(--vp-c-brand-1);   stroke-width: 1.5; }
+.pet-fig .set-b    { fill: var(--vp-c-success-1); fill-opacity: 0.18; stroke: var(--vp-c-success-1); stroke-width: 1.5; }
+
+/* cave (zero-knowledge proofs) */
+.pet-fig .cave     { stroke: var(--vp-c-text-3); stroke-width: 26; fill: none; opacity: 0.45; }
+.pet-fig .cave-fill{ fill: var(--vp-c-text-3); opacity: 0.45; }
+.pet-fig .door     { fill: var(--vp-c-brand-1); }

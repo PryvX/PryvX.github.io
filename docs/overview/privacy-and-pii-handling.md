@@ -25,4 +25,4 @@ When a Collaboration Room is created, PryvX generates a random key and emails it
 
 ## Roadmap
 
-PryvX's broader positioning references additional privacy-enhancing technologies — homomorphic encryption, secure multiparty computation, and federated learning — as part of its longer-term roadmap. These are not yet part of the shipped task-execution path described in this documentation; today's privacy guarantees come from local PII hashing plus the room's permission and expiry model described in [Collaboration Rooms](/overview/collaboration-rooms).
+PryvX's broader positioning references additional privacy-enhancing technologies — homomorphic encryption, secure multiparty computation, and federated learning — as part of its longer-term roadmap (see [Privacy-Enhancing Technologies](/privacy-enhancing-technologies) for a primer on how these work). These are not yet part of the shipped task-execution path described in this documentation; today's privacy guarantees come from local PII hashing plus the room's permission and expiry model described in [Collaboration Rooms](/overview/collaboration-rooms).
